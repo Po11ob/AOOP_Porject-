@@ -1,14 +1,24 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import axios from 'axios'
-import App from './App'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './styles.css'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Dashboard from './pages/Dashboard'
+import Transactions from './pages/Transactions'
+import Categories from './pages/Categories'
+import Profile from './pages/Profile'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<App />} />
+        <Route path="/" element={<Dashboard/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/transactions" element={<Transactions/>} />
+        <Route path="/categories" element={<Categories/>} />
+        <Route path="/profile" element={<Profile/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

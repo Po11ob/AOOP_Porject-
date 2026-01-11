@@ -1,0 +1,12 @@
+nohup: ignoring input
+
+> moneymanager-frontend@0.0.1 dev
+> vite --host
+
+Port 5173 is in use, trying another one...
+
+  VITE v4.5.14  ready in 196 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://10.0.1.198:5175:39:34 AM [vite] page reload src/components/Layout.jsx
+5:39:58 AM [vite] page reload src/components/Layout.jsx

@@ -1,0 +1,17 @@
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/dto/RegisterRequest.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/model/Category.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/dto/AuthResponse.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/service/AuthService.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/controller/TransactionController.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/model/Transaction.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/security/JwtFilter.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/security/SecurityConfig.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/repository/CategoryRepository.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/model/User.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/repository/UserRepository.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/repository/TransactionRepository.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/controller/CategoryController.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/security/JwtUtil.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/BackendApplication.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/dto/AuthRequest.java
+/workspaces/AOOP_Porject-/backend/src/main/java/com/moneymanager/backend/controller/AuthController.java
