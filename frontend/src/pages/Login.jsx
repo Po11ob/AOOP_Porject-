@@ -13,7 +13,7 @@ export default function Login(){
       const res = await api.post('/auth/login',{email,password})
       localStorage.setItem('token', res.data.token)
       toast.success('Logged in')
-      navigate('/')
+      navigate('/dashboard')
     }catch(e){ toast.error('Login failed') }
   }
 

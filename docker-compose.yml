@@ -25,5 +25,18 @@ services:
     depends_on:
       - db
 
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_URL=http://backend:8080/api
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://backend:8080/api
+    restart: unless-stopped
+
 volumes:
   db-data:

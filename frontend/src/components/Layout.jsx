@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Home, List, PieChart, User, LogOut } from 'lucide-react'
 
 export default function Layout({children}){
   const navigate = useNavigate()
@@ -10,13 +11,43 @@ export default function Layout({children}){
       <aside className="sidebar">
         <div className="brand">MoneyManager</div>
         <nav>
-          <Link to="/" className={loc.pathname === '/' ? 'active' : ''}>Dashboard</Link>
-          <Link to="/transactions" className={loc.pathname.startsWith('/transactions') ? 'active' : ''}>Transactions</Link>
-          <Link to="/categories" className={loc.pathname.startsWith('/categories') ? 'active' : ''}>Categories</Link>
-          <Link to="/profile" style={{marginTop:12,display:'block'}}>Profile</Link>
+          <div style={{display:'flex',flexDirection:'column'}}>
+            <Link to="/dashboard" className={`nav-link ${loc.pathname === '/dashboard' ? 'active' : ''}`}>
+              <div style={{display:'flex',alignItems:'center'}}>
+                {loc.pathname === '/dashboard' && <div className="nav-indicator" />}
+                <span className="nav-icon"><Home size={18} /></span>
+                <span>Dashboard</span>
+              </div>
+            </Link>
+
+            <Link to="/transactions" className={`nav-link ${loc.pathname.startsWith('/transactions') ? 'active' : ''}`}>
+              <div style={{display:'flex',alignItems:'center'}}>
+                {loc.pathname.startsWith('/transactions') && <div className="nav-indicator" />}
+                <span className="nav-icon"><List size={18} /></span>
+                <span>Transactions</span>
+              </div>
+            </Link>
+
+            <Link to="/categories" className={`nav-link ${loc.pathname.startsWith('/categories') ? 'active' : ''}`}>
+              <div style={{display:'flex',alignItems:'center'}}>
+                {loc.pathname.startsWith('/categories') && <div className="nav-indicator" />}
+                <span className="nav-icon"><PieChart size={18} /></span>
+                <span>Categories</span>
+              </div>
+            </Link>
+
+            <Link to="/profile" className={`nav-link ${loc.pathname.startsWith('/profile') ? 'active' : ''}`} style={{marginTop:12}}>
+              <div style={{display:'flex',alignItems:'center'}}>
+                {loc.pathname.startsWith('/profile') && <div className="nav-indicator" />}
+                <span className="nav-icon"><User size={18} /></span>
+                <span>Profile</span>
+              </div>
+            </Link>
+          </div>
         </nav>
+
         <div style={{marginTop:20}}>
-          <button className="btn btn-outline" onClick={logout}>Logout</button>
+          <button className="btn btn-outline" onClick={logout}><span style={{display:'inline-flex',alignItems:'center',gap:8}}><LogOut size={16}/> Logout</span></button>
         </div>
       </aside>
 
@@ -24,6 +55,7 @@ export default function Layout({children}){
         <div className="topbar">
           <div style={{display:'flex',alignItems:'center',gap:12}}>
             <div style={{fontWeight:800}}>MoneyManager</div>
+            <div className="muted" style={{fontSize:13}}>Analytics Dashboard</div>
           </div>
           <div style={{marginLeft:'auto',display:'flex',alignItems:'center',gap:12}}>
             <div className="muted">hello@example.com</div>
