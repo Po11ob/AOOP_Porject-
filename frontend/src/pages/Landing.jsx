@@ -105,34 +105,53 @@ export default function Landing(){
           </div>
         </section>
 
-        <section className="features container" id="features">
-          <h3 style={{marginBottom:12}}>Features</h3>
-          <div className="features-grid">
-            <div className="feature-card card">
-              <div style={{display:'flex',alignItems:'center',gap:8}}><CreditCard size={20}/> <div style={{fontWeight:700}}>Intuitive Ledger</div></div>
-              <div className="muted">Track income & expenses with easy categorization and receipts.</div>
+        <section className="features" id="features">
+          <div className="container-landing">
+            <div className="section-header">
+              <h2>Powerful Features</h2>
+              <p>Everything you need to manage your finances effectively</p>
             </div>
+            <div className="features-grid">
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <CreditCard size={24}/>
+                </div>
+                <h3 className="feature-title">Intuitive Ledger</h3>
+                <p className="feature-desc">Track income & expenses with easy categorization and receipts.</p>
+              </div>
 
-            <div className="feature-card card">
-              <div style={{display:'flex',alignItems:'center',gap:8}}><TrendingUp size={20}/> <div style={{fontWeight:700}}>Insights & Reports</div></div>
-              <div className="muted">Beautiful charts and exportable reports for stakeholders.</div>
-            </div>
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <TrendingUp size={24}/>
+                </div>
+                <h3 className="feature-title">Insights & Reports</h3>
+                <p className="feature-desc">Beautiful charts and exportable reports for stakeholders.</p>
+              </div>
 
-            <div className="feature-card card">
-              <div style={{display:'flex',alignItems:'center',gap:8}}><Users size={20}/> <div style={{fontWeight:700}}>Team Access</div></div>
-              <div className="muted">Invite team members and control permissions for financial roles.</div>
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <Users size={24}/>
+                </div>
+                <h3 className="feature-title">Team Access</h3>
+                <p className="feature-desc">Invite team members and control permissions for financial roles.</p>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="cta-dark" id="pricing">
-          <div className="container cta-inner">
-            <div>
-              <h3 style={{margin:0,color:'#f0fff4'}}>Ready to simplify your finances?</h3>
-              <div className="muted" style={{color:'rgba(240,255,244,0.9)'}}>Start a free trial — no credit card required.</div>
-            </div>
-            <div>
-              <Link to="/register" className="btn btn-primary">Start Free</Link>
+          <div className="container-landing">
+            <div className="cta-inner">
+              <div className="cta-content">
+                <h2 className="cta-title">Ready to simplify your finances?</h2>
+                <p className="cta-subtitle">Start a free trial — no credit card required. Get instant access to all features.</p>
+              </div>
+              <div className="cta-action">
+                <Link to="/register" className="btn btn-primary btn-lg" style={{display:'inline-flex',alignItems:'center',gap:8}}>
+                  Start Free
+                  <ChevronRight size={18}/>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -147,10 +166,12 @@ export default function Landing(){
         </Modal>
       </main>
 
-      <footer style={{padding:'28px 0',background:'#fff'}}>
-        <div className="container" style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-          <div className="muted">© {new Date().getFullYear()} MoneyManager</div>
-          <div className="muted">Made with ♥</div>
+      <footer className="lp-footer">
+        <div className="container-landing">
+          <div className="footer-content">
+            <div className="muted">© {new Date().getFullYear()} MoneyManager. All rights reserved.</div>
+            <div className="muted">Made with ♥ by the MoneyManager team</div>
+          </div>
         </div>
       </footer>
     </div>
