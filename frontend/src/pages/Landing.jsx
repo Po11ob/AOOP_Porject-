@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { CreditCard, TrendingUp, Users, Shield, Play, ChevronRight } from 'lucide-react'
+import { CreditCard, TrendingUp, Users, Shield, Play, ChevronRight, BarChart3, Lock, Zap, FileText, Bell, RotateCcw, Globe } from 'lucide-react'
 import Modal from '../components/Modal'
 
 export default function Landing(){
@@ -22,7 +22,7 @@ export default function Landing(){
               <a href="#features">Features</a>
               <a href="#pricing">Pricing</a>
               <a href="#partners">Partners</a>
-              <a href="#about">About</a>
+              <Link to="/about">About</Link>
               <a href="#contact">Contact</a>
             </nav>
 
@@ -108,8 +108,8 @@ export default function Landing(){
         <section className="features" id="features">
           <div className="container-landing">
             <div className="section-header">
-              <h2>Powerful Features</h2>
-              <p>Everything you need to manage your finances effectively</p>
+              <h2>Powerful Features for Modern Finance</h2>
+              <p>Everything you need to manage your finances effectively, built for teams and enterprises</p>
             </div>
             <div className="features-grid">
               <div className="feature-card card">
@@ -117,23 +117,120 @@ export default function Landing(){
                   <CreditCard size={24}/>
                 </div>
                 <h3 className="feature-title">Intuitive Ledger</h3>
-                <p className="feature-desc">Track income & expenses with easy categorization and receipts.</p>
+                <p className="feature-desc">Track income & expenses with intelligent categorization, automatic receipt capture, and multi-currency support for global operations.</p>
+                <ul className="feature-list">
+                  <li>Smart categorization</li>
+                  <li>Receipt digitization</li>
+                  <li>Multi-currency support</li>
+                </ul>
               </div>
 
               <div className="feature-card card">
                 <div className="feature-icon">
-                  <TrendingUp size={24}/>
+                  <BarChart3 size={24}/>
                 </div>
-                <h3 className="feature-title">Insights & Reports</h3>
-                <p className="feature-desc">Beautiful charts and exportable reports for stakeholders.</p>
+                <h3 className="feature-title">Advanced Analytics</h3>
+                <p className="feature-desc">Beautiful charts and real-time dashboards providing deep insights into spending patterns, cash flow, and financial health.</p>
+                <ul className="feature-list">
+                  <li>Real-time dashboards</li>
+                  <li>Spending analytics</li>
+                  <li>Cash flow forecasting</li>
+                </ul>
               </div>
 
               <div className="feature-card card">
                 <div className="feature-icon">
                   <Users size={24}/>
                 </div>
-                <h3 className="feature-title">Team Access</h3>
-                <p className="feature-desc">Invite team members and control permissions for financial roles.</p>
+                <h3 className="feature-title">Team Collaboration</h3>
+                <p className="feature-desc">Invite team members, manage roles and permissions, and collaborate seamlessly with granular access controls.</p>
+                <ul className="feature-list">
+                  <li>Role-based access</li>
+                  <li>Audit trails</li>
+                  <li>Team workflows</li>
+                </ul>
+              </div>
+
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <FileText size={24}/>
+                </div>
+                <h3 className="feature-title">Automated Reports</h3>
+                <p className="feature-desc">Generate professional financial reports instantly. Export to PDF, Excel, or share directly with stakeholders and accountants.</p>
+                <ul className="feature-list">
+                  <li>Instant report generation</li>
+                  <li>Multiple export formats</li>
+                  <li>Scheduled reports</li>
+                </ul>
+              </div>
+
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <Lock size={24}/>
+                </div>
+                <h3 className="feature-title">Enterprise Security</h3>
+                <p className="feature-desc">Bank-grade encryption, SOC 2 Type II certification, and compliance with GDPR, CCPA, and PCI-DSS standards.</p>
+                <ul className="feature-list">
+                  <li>AES-256 encryption</li>
+                  <li>SOC 2 Type II certified</li>
+                  <li>Full audit trails</li>
+                </ul>
+              </div>
+
+              <div className="feature-card card">
+                <div className="feature-icon">
+                  <Zap size={24}/>
+                </div>
+                <h3 className="feature-title">Automations</h3>
+                <p className="feature-desc">Automate recurring transactions, billing cycles, and financial workflows to save time and reduce manual errors.</p>
+                <ul className="feature-list">
+                  <li>Recurring transactions</li>
+                  <li>Automatic reconciliation</li>
+                  <li>Smart alerts</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="features-cta-section">
+              <div className="features-cta">
+                <h3 className="cta-heading">Want to explore all features?</h3>
+                <p className="cta-description">Unlock the full potential of MoneyManager with our comprehensive feature set.</p>
+                <Link to="/register" className="btn btn-primary btn-lg">Start Free Trial</Link>
+              </div>
+            </div>
+
+            <div className="features-comparison">
+              <h3 className="comparison-title">Key Capabilities at a Glance</h3>
+              <p className="comparison-subtitle">Everything you need to manage finances with confidence</p>
+              <div className="comparison-grid">
+                <div className="comparison-item">
+                  <div className="comparison-icon-box">
+                    <CreditCard size={24} className="comparison-icon" />
+                  </div>
+                  <h4>Smart Expense Tracking</h4>
+                  <p>Track income and expenses with real-time categorization and intelligent insights.</p>
+                </div>
+                <div className="comparison-item">
+                  <div className="comparison-icon-box">
+                    <BarChart3 size={24} className="comparison-icon" />
+                  </div>
+                  <h4>Advanced Financial Reports</h4>
+                  <p>Generate detailed reports with clear visual insights for better decision making.</p>
+                </div>
+                <div className="comparison-item">
+                  <div className="comparison-icon-box">
+                    <Users size={24} className="comparison-icon" />
+                  </div>
+                  <h4>Secure Team Collaboration</h4>
+                  <p>Manage roles and permissions across teams with granular access controls.</p>
+                </div>
+                <div className="comparison-item">
+                  <div className="comparison-icon-box">
+                    <Globe size={24} className="comparison-icon" />
+                  </div>
+                  <h4>Cloud-Based & Reliable</h4>
+                  <p>Access your financial data anytime, anywhere with 99.99% uptime guarantee.</p>
+                </div>
               </div>
             </div>
           </div>
