@@ -20,8 +20,8 @@ export default function Landing(){
 
             <nav className="lp-links">
               <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
-              <a href="#partners">Partners</a>
+              <Link to="/pricing">Pricing</Link>
+              <Link to="/partners">Partners</Link>
               <Link to="/about">About</Link>
               <a href="#contact">Contact</a>
             </nav>
